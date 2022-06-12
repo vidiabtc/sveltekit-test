@@ -1,0 +1,30 @@
+{
+	"name": "sveltekit-cf-prisma",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "env-cmd svelte-kit dev",
+		"build": "svelte-kit build",
+		"package": "svelte-kit package",
+		"preview": "svelte-kit preview",
+		"prepare": "svelte-kit sync",
+		"lint": "prettier --check --plugin-search-dir=. .",
+		"format": "prettier --write --plugin-search-dir=. .",
+		"postinstall": "npx prisma generate --data-proxy"
+	},
+	"devDependencies": {
+		"@sveltejs/kit": "next",
+		"prettier": "^2.5.1",
+		"prettier-plugin-svelte": "^2.5.0",
+		"process": "^0.11.10",
+		"svelte": "^3.44.0",
+		"svelte-check": "^2.2.6",
+		"svelte-preprocess": "^4.10.6"
+	},
+	"type": "module",
+	"dependencies": {
+		"@prisma/client": "^3.15.1",
+		"@sveltejs/adapter-cloudflare": "^1.0.0-next.21",
+		"env-cmd": "^10.1.0",
+		"prisma": "^3.15.1"
+	}
+}
